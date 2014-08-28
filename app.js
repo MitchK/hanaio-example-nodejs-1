@@ -26,8 +26,20 @@ http.createServer(function (req, res) {
                 res.end('Execution failed! ' + err);
                 return;
             }
-            res.writeHead(200, {'Content-Type': 'application/json'});
-            res.end(JSON.stringify(rows));
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            
+            var name = '[ YOUR NAME HERE ]';
+            
+            var html = '<html>';
+            html = html + '<head><title>example-nodejs-1</title></head>';
+            html = html + '<body><center>';
+            html = html + '<h1>example-nodejs-1</h1>';
+            html = html + '<h2>Hello, ' + name + '</h2>';
+            html = html + 'The current HANA server time is ' + rows[0].time;
+            html = html + '</center></body>';
+            html = html + '</html>';
+            
+            res.end(html);
         });
     });
 }).listen(8080);
