@@ -1,4 +1,4 @@
 example-nodejs-1
 ================
 
-Print
+Print HANA server time to the browser 
