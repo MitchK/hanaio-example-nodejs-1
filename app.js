@@ -11,6 +11,7 @@ var client = hdb.createClient({
 });
 
 // server
+console.log("Starting server...");
 http.createServer(function (req, res) {
     client.connect(function (err) {
         if (err) {
@@ -31,4 +32,4 @@ http.createServer(function (req, res) {
     });
 }).listen(8080);
 
-console.log("example-nodejs-1 is listening. ".bold + "Open the endpoint from the HANA.IO dashboard.");
+console.log("example-nodejs-1 is listening. Open the endpoint from the HANA.IO dashboard.");
