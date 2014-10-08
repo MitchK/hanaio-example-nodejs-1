@@ -28,10 +28,10 @@ http.createServer(function (req, res) {
             }
             res.writeHead(200, {'Content-Type': 'text/html'});
             
-            var name = '[ YOUR NAME HERE ]';
+            var name = 'World';
             
             var html = '<html>';
-            html = html + '<head><title>example-nodejs-1</title></head>';
+            html = html + '<head><title>example-nodejs-1</title><meta charset="UTF-8"></head>';
             html = html + '<body><center>';
             html = html + '<h1>example-nodejs-1</h1>';
             html = html + '<h2>Hello, ' + name + '</h2>';
